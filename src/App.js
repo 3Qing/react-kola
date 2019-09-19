@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.less';
+import {
+  BrowserRouter as Router, Route
+} from 'react-router-dom';
+import Routes from './routes';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+const routes = Routes.routes;
+const RouteWithSubRoutes = (route) => {
+  return (
+    <Route
+      exact
+      path={route.path}
+      render={props => (
+        <route.component {...props} routes={route.routes} />
+      )}/>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      {routes.map((route, i) => (
+        <RouteWithSubRoutes key={i} {...route} />
+      ))}
+    </Router>
+  );
 }
 
 export default App;
