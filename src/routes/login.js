@@ -1,6 +1,7 @@
-import Login from '../views/Login';
+import Login from '../views/login';
 
 export default {
-  path: '/login',
-  component: Login
+    path: '/login',
+    component: Login,
+    exact: true
 };

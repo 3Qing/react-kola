@@ -26,9 +26,11 @@ module.exports = {
         "react"
     ],
     rules: {
-        "indent": [ "error", 2 ],
-        "space-before-function-paren": 0,
+        "indent": [ "error", 4 ],
+        "space-before-function-paren": ["error", 'never'],
         "semi": [ "error", "always" ],
+        "key-spacing": ["error", { "afterColon": true }],
+        "object-curly-spacing": ["error", "always"],
         "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",

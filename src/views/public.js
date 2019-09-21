@@ -1,19 +1,23 @@
 import React, { Fragment } from 'react';
+import Header from '@/components/header/index';
 
 class Public extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-  render() {
-    return (
-      <Fragment>
-        header
-        main
-      </Fragment>
-    );
-  }
+    componentDidMount() {
+        this.props.history.push('/');
+    }
+
+    render() {
+        return (
+            <Fragment>
+                <Header></Header>
+            </Fragment>
+        );
+    }
 }
 
 export default Public;
