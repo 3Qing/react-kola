@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-import Header from '@/components/header/index';
+import Header from '@/components/header';
+import SearchBar from '@/components/search-bar';
 
 class Public extends React.Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class Public extends React.Component {
         return (
             <Fragment>
                 <Header></Header>
+                <SearchBar></SearchBar>
             </Fragment>
         );
     }

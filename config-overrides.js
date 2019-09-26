@@ -1,4 +1,4 @@
-const { override, addLessLoader, fixBabelImports, addWebpackAlias, addWebpackModuleRule } = require("customize-cra");
+const { override, addLessLoader, fixBabelImports, addWebpackAlias, addWebpackModuleRule, addWebpackResolve } = require("customize-cra");
 const path = require('path');
 
 module.exports = override(
@@ -14,6 +14,10 @@ module.exports = override(
   }),
   addWebpackAlias({
     '@': path.resolve(__dirname, './src')
+  }),
+  addWebpackResolve({
+    extensions: ['.js', '.json', '.less'],
+    mainFiles: ['index'],
   }),
   addWebpackModuleRule({
     test: /\.jsx?$/,

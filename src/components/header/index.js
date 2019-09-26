@@ -18,18 +18,20 @@ class Header extends React.Component {
         );
         return (
             <div className="header">
-                <div className="header-wrapper">
-                    <div className="hd-left">
-                        <span>考拉欢迎你！</span>
-                        <Link to="/">登录</Link>
-                        <Link to="/">免费注册</Link>
-                    </div>
-                    <div className="hd-right">
-                        <Link>我的订单</Link>
-                        <Dropdown overlay={center}>
-                            <Link>个人中心<Icon type="down" /></Link>
-                        </Dropdown>
-                    </div>
+                <div className="header-wrapper clear">
+                    <ul className="hd-left left clear">
+                        <li><span>考拉欢迎你！</span></li>
+                        <li><Link to="/">登录</Link></li>
+                        <li><Link to="/">免费注册</Link></li>
+                    </ul>
+                    <ul className="hd-right right clear">
+                        <li><Link to="#">我的订单</Link></li>
+                        <li>
+                            <Dropdown overlay={center}>
+                                <Link to="#">个人中心<Icon type="down" /></Link>
+                            </Dropdown>
+                        </li>
+                    </ul>
                 </div>
             </div>
         );

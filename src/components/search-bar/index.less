@@ -1,0 +1,82 @@
+@top: 20px;
+@red: #ff2337;
+.search-bar {
+    width: 1090px;
+    margin: 0 auto;
+    position: relative;
+    height: 100px;
+    .logo {
+        position: absolute;
+        left: 0;
+        top: @top;
+        width: 330px;
+        height: 65px;
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+    .search-wrapper {
+        position: absolute;
+        left: 343px;
+        top: @top;
+        width: 510px;
+        input {
+            border-width: 2px;
+            border-radius: 50px;
+            border-color: @red !important;
+            box-shadow: none !important;
+        }
+        .ant-input-suffix {
+            right: 0;
+            color: #fff;
+            width: 60px;
+            height: 40px;
+            border-color: @red;
+            background-color: @red;
+            border-radius: 50px;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.85;
+            }
+            i {
+                margin: 0 auto;
+                font-size: 24px;
+            }
+        }
+        .tag-list {
+            line-height: 22px;
+            color: #999;
+            li {
+                margin-left: 30px;
+                font-size: 12px;
+            }
+            a:hover {
+                color: #999;
+                text-decoration: underline;
+            }
+        }
+    }
+    .shop-cart {
+        position: absolute;
+        top: @top;
+        right: 76px;
+        width: 106px;
+        height: 40px;
+        line-height: 38px;
+        border: 2px solid @red;
+        background-color: #fff;
+        border-radius: 36px;
+        text-align: center;
+        &:hover {
+            color: @red;
+            background-color: #fff4f5;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 6px;
+        }
+    }
+}
